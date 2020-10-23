@@ -55,16 +55,15 @@ function animatePress(currentColour){
 //wait for first key press to start game
 
   $(document).keypress(function(event){
-    console.log(event.key);
+  //  console.log(event.key);
     if(gameStarted!=1)
     {
       nextSequence();
     }gameStarted=1;
   //  console.log(gameStarted);
   });
-  if ("ontouchstart" in document.documentElement)
+  $(document).on("tap",function()
   {
-    console.log(event.key);
     if(gameStarted!=1)
     {
       nextSequence();
