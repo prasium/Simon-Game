@@ -53,14 +53,23 @@ function animatePress(currentColour){
 }
 
 //wait for first key press to start game
-$(document).keypress(function(event){
-  console.log(event.key);
-  if(gameStarted!=1)
+
+  $(document).keypress(function(event){
+    console.log(event.key);
+    if(gameStarted!=1)
+    {
+      nextSequence();
+    }gameStarted=1;
+  //  console.log(gameStarted);
+  });
+  if ("ontouchstart" in document.documentElement)
   {
-    nextSequence();
-  }gameStarted=1;
-//  console.log(gameStarted);
-});
+    console.log(event.key);
+    if(gameStarted!=1)
+    {
+      nextSequence();
+    }gameStarted=1;
+  }
 
 //function to check if the clicks matches with the pattern
 function checkAnswer(ind){
