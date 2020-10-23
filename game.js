@@ -62,13 +62,12 @@ function animatePress(currentColour){
     }gameStarted=1;
   //  console.log(gameStarted);
   });
-  $(document).on("tap",function()
-  {
+  $("body").on("tap",function(){
     if(gameStarted!=1)
     {
       nextSequence();
     }gameStarted=1;
-  }
+  });
 
 //function to check if the clicks matches with the pattern
 function checkAnswer(ind){
